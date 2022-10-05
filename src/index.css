@@ -1,0 +1,119 @@
+*::before,
+*::after,
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #c0c0c0;
+  max-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-size: 2rem;
+  color: #fff;
+}
+
+p {
+  color: grey;
+  font-weight: 600;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5vh;
+  padding: 2em 1em;
+}
+
+nav img {
+  width: auto;
+  height: 2em;
+}
+
+img {
+  width: 100%;
+}
+
+.backgroundimg-dog {
+  height: 80vh;
+  display: flex;
+  justify-content: flex-end;
+  flex-flow: column wrap;
+  padding: 0em 1em;
+  margin: 1em;
+  border-radius: 10px;
+  background-image: repeating-linear-gradient(limegreen, red);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.name-age {
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+}
+
+button {
+  margin: 0;
+  padding: 1em 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: none;
+  transition: box-shadow 0.3s ease-in;
+  box-shadow: 0px 10px 20px grey;
+}
+
+.buttonYes:hover,
+.buttonYes:focus {
+  transition: background-color box-shadow 0.3s ease-in;
+  box-shadow: 0px 10px 20px #e9e9ea;
+  background-color: #dbfff4;
+}
+
+.buttonNo:hover,
+.buttonNo:focus {
+  transition: background-color box-shadow 0.3s ease-in;
+  box-shadow: 0px 10px 20px #e9e9ea;
+  background-color: #ffe7ef;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 2vh 0;
+}
+
+.like {
+  position: fixed;
+  top: 20vh;
+  left: 5vh;
+  transform: rotate(-50deg);
+  width: 40%;
+}
+
+.nope {
+  position: fixed;
+  top: 20vh;
+  right: 5vh;
+  transform: rotate(50deg);
+  width: 40%;
+}
