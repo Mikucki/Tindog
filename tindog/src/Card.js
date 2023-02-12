@@ -5,11 +5,17 @@ import { RxCross2 } from "react-icons/rx";
 import { GrTurbolinux } from "react-icons/gr";
 import { AiFillStar } from "react-icons/ai";
 
-const Card = ({ name, imageUrl, bio }) => {
+const Card = ({ name, imageUrl, bio, age }) => {
   return (
     <div className="card">
-      <h3>{name}</h3>
-      <p>{bio}</p>
+      <div className="intro">
+        <div className="name-age">
+          <h1 className="name-age-same">{name}</h1>
+          <p className="name-age-same">{age}</p>
+        </div>
+        <div>active</div>
+        <div>{bio}</div>
+      </div>
       <div className="buttons">
         <button type="button" className="button small prev">
           <VscDebugStepBack className="icon-button" />
@@ -21,7 +27,7 @@ const Card = ({ name, imageUrl, bio }) => {
           <AiFillStar className="icon-button" />
         </button>
         <button type="button" className="button big like">
-          <AiFillHeart className="icon-button special2" />
+          <AiFillHeart className="icon-button special" />
         </button>
         <button type="button" className="button small turbo">
           <GrTurbolinux className="icon-button" />
