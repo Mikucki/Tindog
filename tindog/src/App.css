@@ -35,7 +35,6 @@ body {
   margin: auto;
   height: 86vh;
   border-radius: 6px;
-  background-image: url(./img/download.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -198,4 +197,8 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   height: 15vh;
+}
+
+button:target {
+  background-color: red;
 }
