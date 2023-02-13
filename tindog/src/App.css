@@ -39,6 +39,18 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card2 {
+  position: absolute;
+  top: 7vh;
+  z-index: -2;
+  left: 4px;
+}
+
+.card:hover {
+  transform: translateX(-80%) rotate(-7deg);
 }
 
 .card::before {
@@ -67,6 +79,7 @@ body {
   width: 100%;
   background-color: var(--background-color-main);
   list-style-type: none;
+
   height: 7vh;
 }
 
@@ -114,6 +127,7 @@ body {
   background-color: rgba(240, 248, 255, 0);
   cursor: pointer;
   position: relative;
+  bottom: 80px;
 }
 
 .icon-button {
@@ -136,7 +150,8 @@ body {
   justify-content: space-evenly;
   display: flex;
   align-items: center;
-  padding-bottom: 1vh;
+  position: absolute;
+  bottom: 1px;
 }
 
 .prev {
@@ -168,12 +183,21 @@ body {
   body {
     width: 50vw;
   }
+  .buttons {
+    width: 50%;
+  }
+  .card2 {
+    left: auto;
+    width: 50%;
+  }
 }
 
 .intro {
   color: white;
   z-index: 1;
   padding-left: var(--main-padding);
+  display: flex;
+  gap: 4px;
 }
 
 .name-age {
@@ -199,6 +223,17 @@ body {
   height: 15vh;
 }
 
-button:target {
-  background-color: red;
+.adventages {
+  display: flex;
+  gap: 5px;
+  flex-flow: row wrap;
+  margin-bottom: 160px;
+}
+
+.adventage {
+  background-color: rgba(255, 255, 255, 0.13);
+  color: white;
+  border: 1px solid white;
+  padding: 3px 15px;
+  border-radius: 20px;
 }

@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <Mainnav />
-      <Card imageUrl="users[1].picture.lare" />
+      <Card />
       <Navbar />
     </div>
   );
