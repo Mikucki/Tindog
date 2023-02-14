@@ -24,6 +24,7 @@ body {
   margin: auto;
   height: 100vh;
   background-color: var(--background-color-main);
+  overflow: hidden;
 }
 
 .card {
@@ -64,8 +65,17 @@ body {
   transform: translateX(-120vw) rotate(-9deg);
 }
 
+.swipe-right {
+  transition: transform 0.5s;
+  transform: translateX(120vw) rotate(9deg);
+}
+
 .change-index {
-  z-index: -11;
+  z-index: 1000;
+}
+
+.change-index--1 {
+  z-index: -1;
 }
 
 .card2::before {
