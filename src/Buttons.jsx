@@ -34,11 +34,11 @@ function Buttons({ getNewValue }) {
     setIsDisabled(true);
     setTimeout(() => {
       setIsDisabled(false);
-      card.classList.remove("swipe-right");
+      document.querySelector(".card").classList.remove("swipe-right");
       like.style.display = "none";
       getNewValue();
     }, 2000);
-    like.style.display = "flex";
+    document.getElementById("like").style.display = "flex";
     card.classList.add("swipe-right");
   }
 
