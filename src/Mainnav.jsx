@@ -7,7 +7,7 @@ function Mainnav() {
     <div>
       <nav className="mainnav">
         <TbPremiumRights />
-        <h1>Tindog</h1>
+        <h1>WoofMatch</h1>
       </nav>
     </div>
   );
