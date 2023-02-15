@@ -27,13 +27,8 @@ body {
   overflow: hidden;
 }
 
-button {
-  text-decoration: none;
-}
-
 .card {
   width: 98%;
-
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
