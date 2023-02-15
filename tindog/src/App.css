@@ -24,6 +24,7 @@ body {
   margin: auto;
   height: 100vh;
   background-color: var(--background-color-main);
+  overflow: hidden;
 }
 
 button {
@@ -32,6 +33,7 @@ button {
 
 .card {
   width: 98%;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -261,6 +263,9 @@ button {
     width: 50%;
     left: auto;
   }
+  .card {
+    width: 100%;
+  }
 }
 
 .intro {
@@ -331,7 +336,7 @@ button {
   color: greenyellow;
   border-radius: 6px;
   border: 4px solid greenyellow;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   width: 180px;

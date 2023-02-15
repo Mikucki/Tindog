@@ -1,6 +1,6 @@
 import "./App.css";
 import Navbar from "./Navbar";
-import Card from "./Card.js";
+import Card from "./Card";
 import Card2 from "./Card2";
 import { useEffect, useState } from "react";
 import Mainnav from "./Mainnav";
