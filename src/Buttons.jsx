@@ -11,35 +11,29 @@ function Buttons({ getNewValue }) {
   const [isDisabled, setIsDisabled] = useState(false);
   let [cardIsOnTop, setCardOnTop] = useState(true);
 
-  //dodaaj co 2 karte klinknieta zeby zdjecia nie uciekaly
-  const card = document.querySelector(".card");
-  const like = document.getElementById("like");
-  const nope = document.getElementById("nope");
-
   function swipeNope() {
     setCardOnTop(!cardIsOnTop);
     setIsDisabled(true);
     setTimeout(() => {
       setIsDisabled(false);
-      card.classList.remove("swipe");
-      nope.style.display = "none";
+      document.querySelector(".card").classList.remove("swipe");
+      document.getElementById("nope").style.display = "none";
       getNewValue();
     }, 2000);
-    nope.style.display = "flex";
-    card.classList.add("swipe");
+    document.getElementById("nope").style.display = "flex";
+    document.querySelector(".card").classList.add("swipe");
   }
-
   function swipeLike() {
     setCardOnTop(!cardIsOnTop);
     setIsDisabled(true);
     setTimeout(() => {
       setIsDisabled(false);
       document.querySelector(".card").classList.remove("swipe-right");
-      like.style.display = "none";
+      document.getElementById("like").style.display = "none";
       getNewValue();
     }, 2000);
     document.getElementById("like").style.display = "flex";
-    card.classList.add("swipe-right");
+    document.querySelector(".card").classList.add("swipe-right");
   }
 
   return (
