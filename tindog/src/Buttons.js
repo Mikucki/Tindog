@@ -9,40 +9,40 @@ import { useState } from "react";
 
 function Buttons({ getNewValue }) {
   const [isDisabled, setIsDisabled] = useState(false);
+  let [cardIsOnTop, setCardOnTop] = useState(true);
 
   //dodaaj co 2 karte klinknieta zeby zdjecia nie uciekaly
-  function swipeLeftClick() {
-    getNewValue();
+  const card = document.querySelector(".card");
+  const like = document.getElementById("like");
+  const nope = document.getElementById("nope");
+
+  function swipe() {
+    setCardOnTop(!cardIsOnTop);
     setIsDisabled(true);
-    setTimeout(() => {
-      setIsDisabled(false);
-    }, 2000);
-
-    const card = document.querySelector(".card");
-    card.classList.add("swipe");
-    card.classList.add("change-index");
-
-    setTimeout(() => {
-      card.classList.add("change-index--1");
-      card.classList.remove("swipe");
-    }, 2000);
   }
 
-  function swipeRightClick() {
-    getNewValue();
-    setIsDisabled(true);
+  function swipeNope() {
+    swipe();
     setTimeout(() => {
       setIsDisabled(false);
+      card.classList.remove("swipe");
+      nope.style.display = "none";
+      getNewValue();
     }, 2000);
+    nope.style.display = "flex";
+    card.classList.add("swipe");
+  }
 
-    const card = document.querySelector(".card");
-    card.classList.add("swipe-right");
-    card.classList.add("change-index");
+  function swipeLike() {
+    swipe();
     setTimeout(() => {
-      card.classList.add("change-index--1");
-
+      setIsDisabled(false);
       card.classList.remove("swipe-right");
+      like.style.display = "none";
+      getNewValue();
     }, 2000);
+    like.style.display = "flex";
+    card.classList.add("swipe-right");
   }
 
   return (
@@ -54,7 +54,7 @@ function Buttons({ getNewValue }) {
         id="nope"
         type="button"
         className="button big nope"
-        onClick={swipeLeftClick}
+        onClick={swipeNope}
         disabled={isDisabled}
       >
         <RxCross2 className="icon-button special" />
@@ -66,7 +66,7 @@ function Buttons({ getNewValue }) {
         id="like"
         type="button"
         className="button big like"
-        onClick={swipeRightClick}
+        onClick={swipeLike}
         disabled={isDisabled}
       >
         <AiFillHeart className="icon-button special" />

@@ -5,6 +5,7 @@ import Card2 from "./Card2";
 import { useEffect, useState } from "react";
 import Mainnav from "./Mainnav";
 import Buttons from "./Buttons";
+import Card3 from "./Card3";
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -22,7 +23,6 @@ function App() {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setIsLoading(false);
         setUsers(data);
       })
@@ -35,6 +35,7 @@ function App() {
     return <div>Loading...</div>;
   }
 
+  console.log(newValue);
   function getNewValue() {
     const newRandomValue = Math.floor(Math.random() * users.length);
     setPrevValue(currentValue);
@@ -46,6 +47,8 @@ function App() {
     <div className="App">
       <Mainnav />
       <Card prevValue={prevValue} users={users} />
+      <Card3 prevValue={prevValue} users={users} />
+
       <Card2 currentValue={currentValue} users={users} />
       <Buttons getNewValue={getNewValue} />
       <Navbar />

@@ -1,7 +1,6 @@
 import "./App.css";
-import React, { useState } from "react";
 
-const Card = ({ users, prevValue }) => {
+const Card3 = ({ users, prevValue }) => {
   let adventagesString = users[prevValue].temperament;
   let adventagesArray;
   if (adventagesString === undefined || adventagesString.length === 0) {
@@ -16,13 +15,7 @@ const Card = ({ users, prevValue }) => {
   };
   return (
     <div>
-      <div className="card" style={generateImg}>
-        <div id="like" className="sticker-like">
-          LIKE
-        </div>
-        <div id="nope" className="sticker-nope">
-          NOPE
-        </div>
+      <div className="card3" style={generateImg}>
         <div className="intro">
           <div className="name-age">
             <h1 className="name-age-same">
@@ -34,6 +27,7 @@ const Card = ({ users, prevValue }) => {
               {users[prevValue].life_span.slice(0, 2)}
             </p>
           </div>
+
           <div className="adventages">
             <div className="adventage">{adventagesArray[0]}</div>
             <div className="adventage">{adventagesArray[1]}</div>
@@ -45,4 +39,4 @@ const Card = ({ users, prevValue }) => {
   );
 };
 
-export default Card;
+export default Card3;
