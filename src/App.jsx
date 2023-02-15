@@ -25,6 +25,7 @@ function App() {
       .then((data) => {
         setIsLoading(false);
         setUsers(data);
+        console.log(data);
       })
       .catch((error) => {
         console.log(error);
