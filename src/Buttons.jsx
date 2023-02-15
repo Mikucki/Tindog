@@ -16,13 +16,9 @@ function Buttons({ getNewValue }) {
   const like = document.getElementById("like");
   const nope = document.getElementById("nope");
 
-  function swipe() {
+  function swipeNope() {
     setCardOnTop(!cardIsOnTop);
     setIsDisabled(true);
-  }
-
-  function swipeNope() {
-    swipe();
     setTimeout(() => {
       setIsDisabled(false);
       card.classList.remove("swipe");
@@ -34,7 +30,8 @@ function Buttons({ getNewValue }) {
   }
 
   function swipeLike() {
-    swipe();
+    setCardOnTop(!cardIsOnTop);
+    setIsDisabled(true);
     setTimeout(() => {
       setIsDisabled(false);
       card.classList.remove("swipe-right");
