@@ -19,7 +19,7 @@ function Buttons({ getNewValue }) {
       document.querySelector(".card").classList.remove("swipe");
       document.getElementById("nope").style.display = "none";
       getNewValue();
-    }, 2000);
+    }, 500);
     document.getElementById("nope").style.display = "flex";
     document.querySelector(".card").classList.add("swipe");
   }
@@ -31,7 +31,7 @@ function Buttons({ getNewValue }) {
       document.querySelector(".card").classList.remove("swipe-right");
       document.getElementById("like").style.display = "none";
       getNewValue();
-    }, 2000);
+    }, 500);
     document.getElementById("like").style.display = "flex";
     document.querySelector(".card").classList.add("swipe-right");
   }

@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import Mainnav from "./Mainnav";
 import Buttons from "./Buttons";
 import Card3 from "./Card3";
+import SignUp from "./SignUp";
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -25,7 +26,6 @@ function App() {
       .then((data) => {
         setIsLoading(false);
         setUsers(data);
-        console.log(data);
       })
       .catch((error) => {
         console.log(error);
@@ -36,7 +36,6 @@ function App() {
     return <div>Loading...</div>;
   }
 
-  console.log(newValue);
   function getNewValue() {
     const newRandomValue = Math.floor(Math.random() * users.length);
     setPrevValue(currentValue);
