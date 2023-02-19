@@ -14,26 +14,38 @@ function Buttons({ getNewValue }) {
   function swipeNope() {
     setCardOnTop(!cardIsOnTop);
     setIsDisabled(true);
+
+    document.getElementById("nope").style.display = "flex";
+    document.querySelector(".card").classList.add("swipe");
     setTimeout(() => {
       setIsDisabled(false);
       document.querySelector(".card").classList.remove("swipe");
       document.getElementById("nope").style.display = "none";
+      document
+        .querySelector(".card")
+        .classList.remove("change-index-minus-one");
+      document.querySelector(".card").classList.add("change-index-plus-one");
+
       getNewValue();
-    }, 500);
-    document.getElementById("nope").style.display = "flex";
-    document.querySelector(".card").classList.add("swipe");
+    }, 250);
   }
   function swipeLike() {
     setCardOnTop(!cardIsOnTop);
     setIsDisabled(true);
+
+    document.getElementById("like").style.display = "flex";
+    document.querySelector(".card").classList.add("swipe-right");
     setTimeout(() => {
       setIsDisabled(false);
       document.querySelector(".card").classList.remove("swipe-right");
       document.getElementById("like").style.display = "none";
+      document.querySelector(".card").classList.add("change-index-plus-one");
+      document
+        .querySelector(".card")
+        .classList.remove("change-index-minus-one");
+
       getNewValue();
-    }, 500);
-    document.getElementById("like").style.display = "flex";
-    document.querySelector(".card").classList.add("swipe-right");
+    }, 250);
   }
 
   return (

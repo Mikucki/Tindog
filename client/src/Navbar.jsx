@@ -4,6 +4,7 @@ import { CgProfile } from "react-icons/cg";
 import { FaPaw } from "react-icons/fa";
 import { TbPremiumRights } from "react-icons/tb";
 import SignUp from "./SignUp";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [showProfile, setShowProfile] = useState(false);
@@ -21,10 +22,14 @@ function Navbar() {
             <TbPremiumRights className="icon" />
           </li>
           <li>
-            <FaPaw className="icon" />
+            <Link to="/">
+              <FaPaw className="icon" />
+            </Link>
           </li>
           <li onClick={toggleProfile}>
-            <CgProfile className="icon" />
+            <Link to="/SignUp">
+              <CgProfile className="icon" />
+            </Link>
           </li>
         </ul>
       </nav>

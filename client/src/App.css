@@ -199,6 +199,7 @@ body {
   align-items: center;
   position: absolute;
   bottom: 90px;
+  z-index: 999;
 }
 
 .prev {
@@ -334,11 +335,9 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   gap: 16px;
-  width: 50vw;
-  position: absolute;
-  top: 7vh;
+  width: 98vw;
+  margin: auto;
   height: 86vh;
-  z-index: 9999;
 }
 
 .signup-form h1 {
