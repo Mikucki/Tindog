@@ -1,15 +1,17 @@
 import express from "express";
 import cors from "cors";
-import restaurants from "./api/restaurants.route.js";
-
+import mongoose from "mongoose";
+import router from "./routes/userRoute.js";
 const app = express();
-
-console.log("working");
 
 app.use(cors());
 app.use(express.json());
 
-app.use("/api/v1/restaurants", restaurants);
-app.use("*", (req, res) => res.status(404).json({ error: "not found" }));
+mongoose.connect(
+  "mongodb+srv://Piotr:2P3XyRtRVUyIb4Vr@woofmatc.vwkvpkr.mongodb.net/WoofMatch"
+);
 
+//require route
+app.use("/", router);
+app.listen(3001, () => console.log("twoja stara na 3001"));
 export default app;

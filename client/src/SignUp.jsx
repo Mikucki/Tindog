@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-
+import axios from "axios";
 function SignUp() {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -11,7 +11,13 @@ function SignUp() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(formData); // You can replace this with an API call to submit the form data to a server
+    const newUser = {
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      email: formData.email,
+      password: formData.password,
+    };
+    axios.post("http://localhost:3000/SignUp", newUser);
   };
 
   const handleChange = (event) => {
