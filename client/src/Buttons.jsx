@@ -13,12 +13,15 @@ function Buttons({ getNewValue }) {
 
   function swipeNope() {
     setCardOnTop(!cardIsOnTop);
+
     setIsDisabled(true);
 
     document.getElementById("nope").style.display = "flex";
     document.querySelector(".card").classList.add("swipe");
     setTimeout(() => {
-      setIsDisabled(false);
+      setTimeout(() => {
+        setIsDisabled(false);
+      }, 320);
       document.querySelector(".card").classList.remove("swipe");
       document.getElementById("nope").style.display = "none";
       document
@@ -36,7 +39,9 @@ function Buttons({ getNewValue }) {
     document.getElementById("like").style.display = "flex";
     document.querySelector(".card").classList.add("swipe-right");
     setTimeout(() => {
-      setIsDisabled(false);
+      setTimeout(() => {
+        setIsDisabled(false);
+      }, 320);
       document.querySelector(".card").classList.remove("swipe-right");
       document.getElementById("like").style.display = "none";
       document.querySelector(".card").classList.add("change-index-plus-one");
