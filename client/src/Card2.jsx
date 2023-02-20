@@ -12,7 +12,6 @@ const Card = ({ currentValue, users }) => {
     adventagesArrayForCard2 = ["Happy", "Funny", "Small"];
   } else {
     adventagesArrayForCard2 = advemtagesStringForCard2.split(", ");
-    console.log(adventagesArrayForCard2);
   }
 
   const generateImgfor2Card = {

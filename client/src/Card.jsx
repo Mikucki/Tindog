@@ -7,7 +7,6 @@ const Card = ({ users, prevValue }) => {
     adventagesArray = ["Happy", "Funny", "Small"];
   } else {
     adventagesArray = adventagesString.split(", ");
-    console.log(adventagesArray);
   }
 
   const generateImg = {
