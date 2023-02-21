@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "bcrypt": "^5.1.0",
     "body-parser": "^1.20.1",
     "bson": "^5.0.1",
     "cors": "^2.8.5",
@@ -12,7 +13,7 @@
     "nodemon": "^2.0.20"
   },
   "scripts": {
-    "start": "nodemon --experimental-modules --es-module-specifier-resolution=node server.js"
+    "start": "nodemon server.js"
   },
   "name": "server",
   "version": "1.0.0",
