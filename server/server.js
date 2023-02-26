@@ -2,6 +2,9 @@ import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 import router from "./routes/userRoute.js";
+import dotenv from "dotenv";
+dotenv.config();
+
 const app = express();
 
 app.use(cors());
@@ -13,5 +16,7 @@ mongoose.connect(
 
 //require route
 app.use("/", router);
-app.listen(3001, () => console.log("twoja stara na 3001"));
+app.listen(process.env.PORT, (req, res) => {
+  console.log(`server started at port ${process.env.PORT}`);
+});
 export default app;
