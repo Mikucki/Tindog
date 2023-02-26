@@ -1,21 +1,15 @@
 import express from "express";
-import User from "../models/woofMatch.js";
+import User from "../models/userModel.js";
+import {
+  registerUser,
+  getUser,
+  deleteUser,
+} from "../controllers/userController.js";
 
 const router = express.Router();
 
-router.post("/SignUp", (req, res) => {
-  const firstName = req.body.firstName;
-  const lastName = req.body.lastName;
-  const email = req.body.email;
-  const password = req.body.password;
-  const newUser = new User({
-    firstName,
-    lastName,
-    email,
-    password,
-  });
-
-  newUser.save();
-});
+router.post("/api/register", registerUser);
+router.delete("/api/delete", deleteUser);
+router.get("/api/user", getUser);
 
 export default router;

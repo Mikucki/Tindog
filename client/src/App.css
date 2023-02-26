@@ -23,6 +23,7 @@ body {
   margin: auto;
   height: 100vh;
   background-color: var(--background-color-main);
+  overflow: hidden;
 }
 
 .card {
@@ -245,6 +246,10 @@ body {
   .card {
     width: 100%;
   }
+  .signup-container {
+    width: 49vw;
+    margin: auto;
+  }
 }
 
 .intro {
@@ -335,9 +340,12 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   gap: 16px;
-  width: 98vw;
   margin: auto;
   height: 86vh;
+}
+
+.sign-up {
+  text-align: center;
 }
 
 .signup-form h1 {

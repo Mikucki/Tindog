@@ -29,12 +29,13 @@ function SignUp() {
   return (
     <div className="signup-container">
       <form autoComplete="off" onSubmit={handleSubmit} className="signup-form">
-        <h1>Sign Up</h1>
+        <h1 className="sign-up">Sign Up</h1>
         <label htmlFor="firstName">First Name:</label>
         <input
           type="text"
           id="firstName"
           name="firstName"
+          value={formData.firstName}
           onChange={handleChange}
           required
         />
@@ -44,6 +45,7 @@ function SignUp() {
           type="text"
           id="lastName"
           name="lastName"
+          value={formData.lastName}
           onChange={handleChange}
           required
         />
@@ -53,6 +55,7 @@ function SignUp() {
           type="email"
           id="email"
           name="email"
+          value={formData.email}
           onChange={handleChange}
           required
           autoComplete="new-password"
@@ -63,6 +66,7 @@ function SignUp() {
           type="password"
           id="password"
           name="password"
+          value={formData.password}
           onChange={handleChange}
           minLength={8}
           required
